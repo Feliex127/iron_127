@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>iron_127 — 個人網站</title>
+  <meta name="description" content="簡潔、快速的個人介紹頁（參考 creeperdev.me 風格）。請把範例文字替換成你的內容。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1220;--fg:#e6eef6;--muted:#9aa4b2;--accent1:#7dd3fc;--accent2:#60a5fa}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#020617 0%, #061226 100%);color:var(--fg);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+
+    /* Center column */
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px}
+    .card{width:100%;max-width:860px;padding:40px;border-radius:16px;position:relative;overflow:hidden}
+
+    /* subtle glass */
+    .surface{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 40px rgba(2,6,23,0.6);padding:36px;border-radius:12px}
+
+    /* decorative gradient blob */
+    .blob{position:absolute;right:-120px;top:-80px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(125,211,252,0.18), transparent 25%), radial-gradient(circle at 70% 70%, rgba(96,165,250,0.12), transparent 20%);filter:blur(36px);transform:rotate(20deg);pointer-events:none}
+
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:14px;flex:0 0 96px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:#04202a;font-weight:800;font-size:28px}
+    .title h1{margin:0 0 6px;font-size:28px}
+    .title p{margin:0;color:var(--muted)}
+
+    .links{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+    main{margin-top:30px;display:grid;grid-template-columns:1fr 320px;gap:22px}
+    .left p{color:var(--muted);line-height:1.6}
+    .right{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));padding:14px;border-radius:12px}
+
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+    .project small{color:var(--muted)}
+
+    footer{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:880px){
+      main{grid-template-columns:1fr}
+      .blob{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card surface">
+      <div class="blob" aria-hidden></div>
+
+      <header>
+        <img src="logo.png" alt="我的頭像">
+        <div class="title">
+          <h1>iron_127</h1>
+          <p>簡潔介紹 — 廢材</p>
+          <div class="links">
+            <a class="btn" href="#projects">作品</a>
+            <a class="btn" href="#contact">聯絡</a>
+            <a class="btn" href="https://github.com/Feliex127">GitHub</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="left">
+          <h2>關於我</h2>
+          <p>嗨，我是iron_127。</p>
+
+          <h3 id="projects">近期作品</h3>
+          <div class="projects">
+            <div class="project">
+              <div style="display:flex;justify-content:space-between;align-items:center"><strong>星夜篝火 伺服器</strong><small>2025</small></div>
+              <small>minecraft伺服器，伺服器網頁在右方。</small>
+            </div>
+            <div class="project">
+              <div style="display:flex;justify-content:space-between;align-items:center"><strong>伺服器架設</strong><small>2024</small></div>
+              <small>西瓜皮伺服器(現已倒閉)。</small>
+            </div>
+          </div>
+
+          <h3 style="margin-top:16px">技能</h3>
+          <p style="color:var(--muted)">無?</p>
+        </section>
+
+        <aside class="right">
+          <h3 id="contact">聯絡我</h3>
+          <p style="color:var(--muted)">github: <strong>https://github.com/Feliex127</strong></p>
+          <p style="color:var(--muted)">Discord: <strong>feliex127</strong></p>
+          <div style="margin-top:10px">
+            <a class="btn" href="https://github.com/Feliex127">github</a>
+            <a class="btn" href="https://starry-night-bonfire.vercel.app/">星夜篝火</a>
+          </div>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+          <h4>社群</h4>
+          <p style="color:var(--muted)">GitHub / 部落格</p>
+        </aside>
+      </main>
+
+      <footer>
+        © <span id="year"></span> iron_127. 版權所有。
+      </footer>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
